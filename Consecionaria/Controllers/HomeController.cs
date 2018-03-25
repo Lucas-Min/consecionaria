@@ -17,7 +17,7 @@ namespace Consecionaria.Controllers
 
             var fordKA = new Auto
             {
-                Marca = "KA",
+                Marca = "KA Nuevo",
                 Año = "2010",
                 KM = 10000,
                 Puertas = 4
