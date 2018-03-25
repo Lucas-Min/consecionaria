@@ -1,0 +1,52 @@
+﻿@model Consecionaria.Models.HomeViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="container" id="bienvenida">
+    <div class="jumbotron text-center">
+        <h1>Concesionario</h1>
+        <p>
+            Hola a todos
+        </p>
+    </div>
+</div>
+
+<div>
+
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Año</th>
+                    <th>KM</th>
+                    <th>Puertas</th>
+                    <th>Es usado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var auto in Model.Autos)
+                {
+                    <tr>
+                        <td>@auto.Marca</td>
+                        <td>@auto.Año</td>
+                        <td>@auto.KM</td>
+                        <td>@auto.Puertas</td>
+                        @if(auto.KM > 0)
+                        {
+                            <td>SI</td>
+                        }
+                        else
+                        {
+                            <td>NO</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
